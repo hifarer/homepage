@@ -129,7 +129,7 @@ export default class Weather extends Component {
   getIPLocation () {
     return new Promise((resolve, reject) => {
       let xhr = new window.XMLHttpRequest()
-      xhr.open('POST', 'http://118.24.116.182:3000/iplocation')
+      xhr.open('POST', 'https://wxmp.applinzi.com/iplocation')
       xhr.send(null)
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
@@ -143,7 +143,7 @@ export default class Weather extends Component {
 
   getWeather (city) {
     let xhr = new window.XMLHttpRequest()
-    xhr.open('POST', 'http://118.24.116.182:3000/weather')
+    xhr.open('POST', 'https://wxmp.applinzi.com/weather')
     xhr.responseType = 'json'
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
     xhr.send('city=' + encodeURIComponent(city))
