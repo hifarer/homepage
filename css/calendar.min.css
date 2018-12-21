@@ -104,7 +104,7 @@ a.btn-next {
   display: inline-block;
   width: 24px;
   height: 32px;
-  background: url(images/icon.png) -155px 0px no-repeat;
+  background: url(/images/icon.png) -155px 0px no-repeat;
   vertical-align: middle;
 }
 .row:first-child .cell p {
