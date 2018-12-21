@@ -1,0 +1,257 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+#app,
+#app > div {
+  height: 100%;
+}
+/*————————————————————home————————————————————*/
+#home {
+  width: 100%;
+  height: 100%;
+  background: url(images/lianliankan/home-bg.png);
+  background-size: 100% 100%;
+}
+#home .btn-box {
+  overflow: hidden;
+  padding: 0.3rem 5% 0.6rem;
+}
+.btn-mark,
+.btn-rules {
+  color: #1da6d6;
+  text-decoration: none;
+  font-size: 0;
+  line-height: 1;
+}
+.btn-mark span,
+.btn-rules span {
+  font-size: 0.36rem;
+}
+.btn-mark *,
+.btn-rules * {
+  vertical-align: middle;
+}
+.btn-mark {
+  float: left;
+}
+.btn-rules {
+  float: right;
+}
+.icon-mark {
+  background: url(images/lianliankan/icon-mark.png);
+}
+.icon-rules {
+  background: url(images/lianliankan/icon-rules.png);
+}
+.icon-mark,
+.icon-rules {
+  display: inline-block;
+  width: 0.44rem;
+  height: 0.40rem;
+  background-size: 0.44rem 0.40rem;
+  margin-right: 0.05rem;
+}
+.btn-start {
+  position: absolute;
+  bottom: 0.60rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+  width: 2.82rem;
+  height: 0.80rem;
+  background: url(images/lianliankan/icon-start.png) no-repeat;
+  background-size: contain;
+}
+/*————————————————————进度条————————————————————*/
+#loading {
+  background: #e9f5f8;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+#loading .wrap {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 35%;
+}
+#loading .progress {
+  width: 80%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#loading .bar-box {
+  width: 80%;
+  height: 0.32rem;
+  overflow: hidden;
+  border: 1px solid #2a97c0;
+  border-radius: 0.24rem;
+  float: left;
+}
+#loading .bar {
+  width: 0;
+  height: 0.32rem;
+  background: #2a97c0;
+}
+#loading .percent {
+  float: right;
+  font-size: 0.32rem;
+  line-height: 0.32rem;
+  color: #2a97c0;
+}
+/*————————————————————弹窗————————————————————*/
+#dialog {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#dialog .wrap {
+  width: 88%;
+  margin: 0 auto;
+  position: absolute;
+  left: 6%;
+  top: 20%;
+  z-index: 2;
+}
+#dialog img {
+  max-width: 100%;
+}
+#dialog .msg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  width: 100%;
+  padding: 5% 10%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#dialog .msg h3 {
+  text-align: center;
+  font-family: "Microsoft YaHei", sans-serif;
+  margin: 0;
+  font-size: 0.48rem;
+}
+#dialog .msg p {
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: 0.32rem;
+  text-align: center;
+}
+#dialog .msg a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.32rem;
+}
+#dialog .btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+#dialog .btn-box a {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+      flex: 3;
+  text-align: center;
+}
+#dialog .btn-box img {
+  height: 1rem;
+}
+#dialog .btn-box p.btn-gap {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+      flex: 1;
+}
+/*————————————————————规则、成绩————————————————————*/
+#rules,
+#score {
+  height: 100%;
+  background: url(images/lianliankan/rules-bg.png) no-repeat;
+  background-size: 100% 100%;
+  padding-top: 8%;
+}
+#rules .wrap,
+#score .wrap {
+  width: 88%;
+  height: 8.5rem;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url(images/lianliankan/rules-frame.png) no-repeat;
+  background-size: 100% 100%;
+  padding: 10%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#rules p {
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: 0.26rem;
+  margin: 0;
+}
+#rules .rule-title {
+  font-weight: bold;
+}
+.btn-iknow {
+  text-align: center;
+  display: block;
+  margin-top: 0.3rem;
+}
+.btn-iknow img {
+  height: 0.8rem;
+}
+#score .wrap {
+  padding: 10% 15% 15% 15%;
+}
+#score table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#score td {
+  table-layout: fixed;
+  border-bottom: 3px solid #2096c2;
+  height: 0.8rem;
+  text-align: center;
+}
+#score tr td:nth-of-type(1) {
+  width: 70%;
+}
+#score tr td:nth-of-type(2) {
+  width: 30%;
+}
+#score td img {
+  max-height: 100%;
+}
+.dismiss-plus {
+  width: 2.4rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -1rem;
+  margin-top: -0.6rem;
+  z-index: 10;
+}
+.dismiss-plus span {
+  color: #2096c2;
+  font-size: 1rem;
+  font-weight: bolder;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+.dismiss-plus img {
+  vertical-align: bottom;
+}
+
