@@ -52,126 +52,126 @@ img {
 /*天气背景*/
 /*晴*/
 .sunny {
-  background-image: url(images/weather/bg-sunny.png);
+  background-image: url(/images/weather/bg-sunny.png);
   background-repeat: repeat-x;
 }
 .sunny .wrap {
-  background: url(images/weather/sunny.png) no-repeat center 0;
+  background: url(/images/weather/sunny.png) no-repeat center 0;
 }
 /*雷*/
 .thunder {
-  background-image: url(images/weather/bg-thunder.png);
+  background-image: url(/images/weather/bg-thunder.png);
   background-repeat: repeat-x;
 }
 .thunder .wrap {
-  background: url(images/weather/thunder.png) no-repeat center 0;
+  background: url(/images/weather/thunder.png) no-repeat center 0;
 }
 /*尘*/
 .dust {
-  background-image: url(images/weather/bg-dust.png);
+  background-image: url(/images/weather/bg-dust.png);
   background-repeat: repeat-x;
 }
 /*雾*/
 .fog {
-  background-image: url(images/weather/bg-fog.png);
+  background-image: url(/images/weather/bg-fog.png);
   background-repeat: repeat-x;
 }
 /*雪*/
 .snow {
-  background-image: url(images/weather/bg-snow.png);
+  background-image: url(/images/weather/bg-snow.png);
   background-repeat: repeat-x;
 }
 .snow .wrap {
-  background: url(images/weather/snow.png) no-repeat center 0;
+  background: url(/images/weather/snow.png) no-repeat center 0;
 }
 /*雨*/
 .rain {
-  background-image: url(images/weather/bg-rain.png);
+  background-image: url(/images/weather/bg-rain.png);
   background-repeat: repeat-x;
 }
 .rain .wrap {
-  background: url(images/weather/rain.png) no-repeat center 0;
+  background: url(/images/weather/rain.png) no-repeat center 0;
 }
 /*天气图标*/
 /*晴*/
 .icon-qing {
-  background: url(images/weather/icon-weather.png) no-repeat 0 0;
+  background: url(/images/weather/icon-weather.png) no-repeat 0 0;
 }
 /*多云*/
 .icon-duoyun {
-  background: url(images/weather/icon-weather.png) no-repeat -72px 0;
+  background: url(/images/weather/icon-weather.png) no-repeat -72px 0;
 }
 /*阴*/
 .icon-yin {
-  background: url(images/weather/icon-weather.png) no-repeat -144px 0;
+  background: url(/images/weather/icon-weather.png) no-repeat -144px 0;
 }
 /*雾*/
 .icon-wu {
-  background: url(images/weather/icon-weather.png) no-repeat -216px 0;
+  background: url(/images/weather/icon-weather.png) no-repeat -216px 0;
 }
 /*冰雹*/
 .icon-bingbao {
-  background: url(images/weather/icon-weather.png) no-repeat -288px 0;
+  background: url(/images/weather/icon-weather.png) no-repeat -288px 0;
 }
 /*沙尘暴*/
 .icon-shachen {
-  background: url(images/weather/icon-weather.png) no-repeat -360px 0;
+  background: url(/images/weather/icon-weather.png) no-repeat -360px 0;
 }
 /*雷阵雨*/
 .icon-leizhenyu {
-  background: url(images/weather/icon-weather.png) no-repeat 0 -72px;
+  background: url(/images/weather/icon-weather.png) no-repeat 0 -72px;
 }
 /*阵雨*/
 .icon-zhenyu {
-  background: url(images/weather/icon-weather.png) no-repeat -72px -72px;
+  background: url(/images/weather/icon-weather.png) no-repeat -72px -72px;
 }
 /*小雨*/
 .icon-xiaoyu {
-  background: url(images/weather/icon-weather.png) no-repeat -144px -72px;
+  background: url(/images/weather/icon-weather.png) no-repeat -144px -72px;
 }
 /*中雨*/
 .icon-zhongyu {
-  background: url(images/weather/icon-weather.png) no-repeat -216px -72px;
+  background: url(/images/weather/icon-weather.png) no-repeat -216px -72px;
 }
 /*大雨*/
 .icon-dayu {
-  background: url(images/weather/icon-weather.png) no-repeat -288px -72px;
+  background: url(/images/weather/icon-weather.png) no-repeat -288px -72px;
 }
 /*暴雨*/
 .icon-baoyu {
-  background: url(images/weather/icon-weather.png) no-repeat -360px -72px;
+  background: url(/images/weather/icon-weather.png) no-repeat -360px -72px;
 }
 /*雨夹雪*/
 .icon-yujiaxue {
-  background: url(images/weather/icon-weather.png) no-repeat 0 -144px;
+  background: url(/images/weather/icon-weather.png) no-repeat 0 -144px;
 }
 /*小雪*/
 .icon-xiaoxue {
-  background: url(images/weather/icon-weather.png) no-repeat -72px -144px;
+  background: url(/images/weather/icon-weather.png) no-repeat -72px -144px;
 }
 /*中雪*/
 .icon-zhongxue {
-  background: url(images/weather/icon-weather.png) no-repeat -144px -144px;
+  background: url(/images/weather/icon-weather.png) no-repeat -144px -144px;
 }
 /*大雪*/
 .icon-daxue {
-  background: url(images/weather/icon-weather.png) no-repeat -216px -144px;
+  background: url(/images/weather/icon-weather.png) no-repeat -216px -144px;
 }
 /*暴雪*/
 .icon-baoxue {
-  background: url(images/weather/icon-weather.png) no-repeat -288px -144px;
+  background: url(/images/weather/icon-weather.png) no-repeat -288px -144px;
 }
 .play-icon {
-  background: url(images/music/play.png) no-repeat;
+  background: url(/images/music/play.png) no-repeat;
 }
 .pause-icon {
-  background: url(images/music/pause.png) no-repeat;
+  background: url(/images/music/pause.png) no-repeat;
 }
 .next-icon {
-  background: url(images/music/next.png) no-repeat;
+  background: url(/images/music/next.png) no-repeat;
 }
 .volume-icon {
-  background: url(images/music/volume.png) no-repeat;
+  background: url(/images/music/volume.png) no-repeat;
 }
 .play-icon,
 .pause-icon,
@@ -331,7 +331,7 @@ body {
   position: absolute;
   top: 5px;
   right: 5px;
-  background: url(images/icon-arrow.png);
+  background: url(/images/icon-arrow.png);
   background-size: contain;
   -webkit-transition: -webkit-transform 200ms;
   transition: -webkit-transform 200ms;

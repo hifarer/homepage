@@ -48,7 +48,7 @@ module.exports = {
   output: {
     filename: 'js/[name].min.js',
     path: path.join(__dirname, 'dist'),
-    publicPath: ''
+    publicPath: '/'
   },
   module: {
     rules: [

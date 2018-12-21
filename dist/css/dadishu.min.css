@@ -25,7 +25,7 @@ body {
 #loading {
   height: 100%;
   overflow: hidden;
-  background: url(images/dadishu/loading-bg.jpg);
+  background: url(/images/dadishu/loading-bg.jpg);
   background-size: 100% 100%;
 }
 #playground {
@@ -35,10 +35,10 @@ body {
   background-size: contain;
 }
 .light-on {
-  background: url(images/dadishu/light-on.png) no-repeat;
+  background: url(/images/dadishu/light-on.png) no-repeat;
 }
 .light-off {
-  background: url(images/dadishu/light-off.png) no-repeat;
+  background: url(/images/dadishu/light-off.png) no-repeat;
 }
 #dropping-coin {
   width: 0.76rem;
@@ -52,7 +52,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(images/dadishu/dropping-coin.png) no-repeat;
+  background: url(/images/dadishu/dropping-coin.png) no-repeat;
   background-size: cover;
 }
 .coin-enter {
@@ -114,7 +114,7 @@ body {
 .dropped-coin2 {
   width: 0.5rem;
   height: 0.40rem;
-  background: url(images/dadishu/dropped-coin.png) no-repeat 0 0;
+  background: url(/images/dadishu/dropped-coin.png) no-repeat 0 0;
   background-size: cover;
   -webkit-animation: v-move 500ms cubic-bezier(0.5, -0.5, 1, 1) forwards;
   animation: v-move 500ms cubic-bezier(0.5, -0.5, 1, 1) forwards;
@@ -169,15 +169,15 @@ body {
   margin-left: -1.58rem;
 }
 #chest.none {
-  background: url(images/dadishu/no-coin.png) no-repeat;
+  background: url(/images/dadishu/no-coin.png) no-repeat;
   background-size: contain;
 }
 #chest.little {
-  background: url(images/dadishu/little-coin.png) no-repeat;
+  background: url(/images/dadishu/little-coin.png) no-repeat;
   background-size: contain;
 }
 #chest.full {
-  background: url(images/dadishu/many-coin.png) no-repeat;
+  background: url(/images/dadishu/many-coin.png) no-repeat;
   background-size: contain;
 }
 #chest p {
@@ -195,7 +195,7 @@ body {
   height: 100%;
   overflow: hidden;
   position: relative;
-  background: url(images/dadishu/home-bg.jpg);
+  background: url(/images/dadishu/home-bg.jpg);
   background-size: 100% 100%;
 }
 #home-ctrl {
@@ -230,7 +230,7 @@ body {
   padding: 30% 6% 6% 6%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url(images/dadishu/rules-bg.png) no-repeat;
+  background: url(/images/dadishu/rules-bg.png) no-repeat;
   background-size: 100% 100%;
 }
 #rules header {
@@ -306,7 +306,7 @@ body {
   background: rgba(0, 0, 0, 0.8);
 }
 #result {
-  background: url(images/dadishu/dialog-bg.png) no-repeat;
+  background: url(/images/dadishu/dialog-bg.png) no-repeat;
   background-size: 100% 100%;
   position: absolute;
   left: 5%;

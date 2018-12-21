@@ -16,7 +16,7 @@ a {
 #home {
   width: 100%;
   height: 100%;
-  background: url(images/lianliankan/home-bg.png);
+  background: url(/images/lianliankan/home-bg.png);
   background-size: 100% 100%;
 }
 #home .btn-box {
@@ -45,10 +45,10 @@ a {
   float: right;
 }
 .icon-mark {
-  background: url(images/lianliankan/icon-mark.png);
+  background: url(/images/lianliankan/icon-mark.png);
 }
 .icon-rules {
-  background: url(images/lianliankan/icon-rules.png);
+  background: url(/images/lianliankan/icon-rules.png);
 }
 .icon-mark,
 .icon-rules {
@@ -67,7 +67,7 @@ a {
       transform: translateX(-50%);
   width: 2.82rem;
   height: 0.80rem;
-  background: url(images/lianliankan/icon-start.png) no-repeat;
+  background: url(/images/lianliankan/icon-start.png) no-repeat;
   background-size: contain;
 }
 /*————————————————————进度条————————————————————*/
@@ -182,7 +182,7 @@ a {
 #rules,
 #score {
   height: 100%;
-  background: url(images/lianliankan/rules-bg.png) no-repeat;
+  background: url(/images/lianliankan/rules-bg.png) no-repeat;
   background-size: 100% 100%;
   padding-top: 8%;
 }
@@ -192,7 +192,7 @@ a {
   height: 8.5rem;
   margin: 0 auto;
   overflow: hidden;
-  background: url(images/lianliankan/rules-frame.png) no-repeat;
+  background: url(/images/lianliankan/rules-frame.png) no-repeat;
   background-size: 100% 100%;
   padding: 10%;
   -webkit-box-sizing: border-box;
