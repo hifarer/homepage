@@ -1,0 +1,11 @@
+extends: 
+- standard
+- standard-react
+plugins:
+- html
+- react
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+rules:
+  react/jsx-no-bind: 0

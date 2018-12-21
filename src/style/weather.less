@@ -1,0 +1,261 @@
+
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #333;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  user-select: none;
+  line-height: 1;
+  color: #333;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background: linear-gradient(#fff, #00abeb);
+}
+
+#info {
+  height: 0.4rem;
+  line-height: 0.4rem;
+  padding: 0.2rem;
+  font-size: 0;
+  
+  .date {
+    font-size: 0.32rem;
+    float: right;
+  }
+}
+.city {
+  margin-left: 0.1rem;
+  margin-right: 0.5rem;
+  font-size: 0.32rem;
+  vertical-align: top;
+}
+
+.icon-local {
+  display: inline-block;
+  width: 0.26rem;
+  height: 0.38rem;
+  background: url('../images/icon.png') -1.54rem -0.94rem no-repeat;
+  background-size: 2rem 1.5rem;
+  vertical-align: top;
+}
+
+#today {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  
+  .temp {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", Arial, "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    font-weight: 100;
+
+    span:first-child {
+      display: inline-block;
+      letter-spacing: -5px;
+      font-size: 2.4rem;
+    }
+    span:last-child {
+      font-size: 0.8rem;
+    }
+  }
+  
+  .details {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    .wrap {
+      display: table;
+      margin: 0 auto;
+    }
+    p {
+      display: table-row;
+      height: 0.85rem;
+      line-height: 0.85rem;
+      font-size: 0.32rem;
+    }
+  }
+  
+}
+
+#forecast {
+  display: flex;
+  width: 100%;
+  padding: 0.28rem 0;
+  background: rgba(51, 51, 51, 0.25);
+}
+
+.someday {
+  color: #fff;
+  font-size: 0.32rem;
+  text-align: center;
+  flex: 1;
+
+  .date {
+    height: 1.2rem;
+  }
+  .date p {
+    height: 0.6rem;
+    line-height: 0.6rem;
+  }
+  .date p:last-child {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .icon {
+    height: 2rem;
+    line-height: 2rem;
+    overflow: hidden;
+  }
+  
+  .desc {
+    height: 0.8rem;
+    line-height: 0.8rem;
+  }
+  
+  .temp {
+    height: 1.8rem;
+  }
+  .temp p {
+    line-height: 0.6rem;
+  }
+}
+
+#toast {
+  width: 3.2rem;
+  height: 2.8rem;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  background: rgba(40, 40, 40, 0.75);
+  text-align: center;
+  border-radius: 0.1rem;
+  color: #FFFFFF;
+  font-size: 0.32rem;
+  transform: translate(-50%, -50%);
+  p:first-child {
+    margin-top: 0.32rem;
+  }
+}
+
+.icon-loading {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  animation: spin 1s steps(12, end) infinite;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=) no-repeat;
+  background-size: contain;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+/*天气图标*/
+#forecast [class^="icon-"] {
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0 auto;
+  background-size: 8.6rem 5.72rem;
+  transform: scale(0.68);
+  vertical-align: middle;
+}
+
+/*晴*/
+.icon-qing {
+  background: url(../images/icon-weather.png) no-repeat 0 0;
+}
+/*多云*/
+.icon-duoyun {
+  background: url(../images/icon-weather.png) no-repeat -1.44rem 0;
+}
+/*阴*/
+.icon-yin {
+  background: url(../images/icon-weather.png) no-repeat -2.88rem 0;
+}
+/*雾*/
+.icon-wu {
+  background: url(../images/icon-weather.png) no-repeat -4.32rem 0;
+}
+/*冰雹*/
+.icon-bingbao {
+  background: url(../images/icon-weather.png) no-repeat -5.76rem 0;
+}
+/*沙尘暴*/
+.icon-shachen {
+  background: url(../images/icon-weather.png) no-repeat -7.2rem 0;
+}
+/*雷阵雨*/
+.icon-leizhenyu {
+  background: url(../images/icon-weather.png) no-repeat 0 -1.44rem;
+}
+/*阵雨*/
+.icon-zhenyu {
+  background: url(../images/icon-weather.png) no-repeat -1.44rem -1.44rem;
+}
+/*小雨*/
+.icon-xiaoyu {
+  background: url(../images/icon-weather.png) no-repeat -2.88rem -1.44rem;
+}
+/*中雨*/
+.icon-zhongyu {
+  background: url(../images/icon-weather.png) no-repeat -4.32rem -1.44rem;
+}
+/*大雨*/
+.icon-dayu {
+  background: url(../images/icon-weather.png) no-repeat -5.76rem -1.44rem;
+}
+/*暴雨*/
+.icon-baoyu {
+  background: url(../images/icon-weather.png) no-repeat -7.2rem -1.44rem;
+}
+/*雨夹雪*/
+.icon-yujiaxue {
+  background: url(../images/icon-weather.png) no-repeat 0 -2.88rem;
+}
+/*小雪*/
+.icon-xiaoxue {
+  background: url(../images/icon-weather.png) no-repeat -1.44rem -2.88rem;
+}
+/*中雪*/
+.icon-zhongxue {
+  background: url(../images/icon-weather.png) no-repeat -2.88rem -2.88rem;
+}
+/*大雪*/
+.icon-daxue {
+  background: url(../images/icon-weather.png) no-repeat -4.32rem -2.88rem;
+}
+/*暴雪*/
+.icon-baoxue {
+  background: url(../images/icon-weather.png) no-repeat -5.76rem -2.88rem;
+}

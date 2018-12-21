@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="no" />
+  <% if (htmlWebpackPlugin.options.app) { %>
+  <meta name="apple-mobile-web-app-title" content="<%= htmlWebpackPlugin.options.title %>" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <% } %>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <% if (htmlWebpackPlugin.options.app) { %>
+  <link rel="apple-touch-icon" href="./images/<%= htmlWebpackPlugin.options.name %>.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./images/<%= htmlWebpackPlugin.options.name %>.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="./images/<%= htmlWebpackPlugin.options.name %>.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="./images/<%= htmlWebpackPlugin.options.name %>.png" />
+  <% } %>
+  <script>
+    var deviceWidth = document.documentElement.clientWidth || screen.width;
+    if (deviceWidth > 750) deviceWidth = 750;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <% if (htmlWebpackPlugin.options.game) { %>
+  <script src="./js/createjs.min.js"></script>
+  <% } %>
+</body>
+</html>

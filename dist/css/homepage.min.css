@@ -1,0 +1,731 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+body,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+}
+i {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.clear {
+  overflow: hidden;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.table {
+  display: table;
+  width: 100%;
+}
+.cell {
+  display: table-cell;
+}
+.column {
+  float: left;
+}
+/*天气背景*/
+/*晴*/
+.sunny {
+  background-image: url(images/weather/bg-sunny.png);
+  background-repeat: repeat-x;
+}
+.sunny .wrap {
+  background: url(images/weather/sunny.png) no-repeat center 0;
+}
+/*雷*/
+.thunder {
+  background-image: url(images/weather/bg-thunder.png);
+  background-repeat: repeat-x;
+}
+.thunder .wrap {
+  background: url(images/weather/thunder.png) no-repeat center 0;
+}
+/*尘*/
+.dust {
+  background-image: url(images/weather/bg-dust.png);
+  background-repeat: repeat-x;
+}
+/*雾*/
+.fog {
+  background-image: url(images/weather/bg-fog.png);
+  background-repeat: repeat-x;
+}
+/*雪*/
+.snow {
+  background-image: url(images/weather/bg-snow.png);
+  background-repeat: repeat-x;
+}
+.snow .wrap {
+  background: url(images/weather/snow.png) no-repeat center 0;
+}
+/*雨*/
+.rain {
+  background-image: url(images/weather/bg-rain.png);
+  background-repeat: repeat-x;
+}
+.rain .wrap {
+  background: url(images/weather/rain.png) no-repeat center 0;
+}
+/*天气图标*/
+/*晴*/
+.icon-qing {
+  background: url(images/weather/icon-weather.png) no-repeat 0 0;
+}
+/*多云*/
+.icon-duoyun {
+  background: url(images/weather/icon-weather.png) no-repeat -72px 0;
+}
+/*阴*/
+.icon-yin {
+  background: url(images/weather/icon-weather.png) no-repeat -144px 0;
+}
+/*雾*/
+.icon-wu {
+  background: url(images/weather/icon-weather.png) no-repeat -216px 0;
+}
+/*冰雹*/
+.icon-bingbao {
+  background: url(images/weather/icon-weather.png) no-repeat -288px 0;
+}
+/*沙尘暴*/
+.icon-shachen {
+  background: url(images/weather/icon-weather.png) no-repeat -360px 0;
+}
+/*雷阵雨*/
+.icon-leizhenyu {
+  background: url(images/weather/icon-weather.png) no-repeat 0 -72px;
+}
+/*阵雨*/
+.icon-zhenyu {
+  background: url(images/weather/icon-weather.png) no-repeat -72px -72px;
+}
+/*小雨*/
+.icon-xiaoyu {
+  background: url(images/weather/icon-weather.png) no-repeat -144px -72px;
+}
+/*中雨*/
+.icon-zhongyu {
+  background: url(images/weather/icon-weather.png) no-repeat -216px -72px;
+}
+/*大雨*/
+.icon-dayu {
+  background: url(images/weather/icon-weather.png) no-repeat -288px -72px;
+}
+/*暴雨*/
+.icon-baoyu {
+  background: url(images/weather/icon-weather.png) no-repeat -360px -72px;
+}
+/*雨夹雪*/
+.icon-yujiaxue {
+  background: url(images/weather/icon-weather.png) no-repeat 0 -144px;
+}
+/*小雪*/
+.icon-xiaoxue {
+  background: url(images/weather/icon-weather.png) no-repeat -72px -144px;
+}
+/*中雪*/
+.icon-zhongxue {
+  background: url(images/weather/icon-weather.png) no-repeat -144px -144px;
+}
+/*大雪*/
+.icon-daxue {
+  background: url(images/weather/icon-weather.png) no-repeat -216px -144px;
+}
+/*暴雪*/
+.icon-baoxue {
+  background: url(images/weather/icon-weather.png) no-repeat -288px -144px;
+}
+.play-icon {
+  background: url(images/music/play.png) no-repeat;
+}
+.pause-icon {
+  background: url(images/music/pause.png) no-repeat;
+}
+.next-icon {
+  background: url(images/music/next.png) no-repeat;
+}
+.volume-icon {
+  background: url(images/music/volume.png) no-repeat;
+}
+.play-icon,
+.pause-icon,
+.next-icon,
+.volume-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-size: contain;
+}
+html,
+body {
+  min-height: 100%;
+}
+#app {
+  padding: 30px;
+}
+.github {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.github img {
+  display: block;
+}
+/*------------------------------------*/
+#profile {
+  width: 270px;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  background: #f5f5f5;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.portrait {
+  width: 80%;
+  height: 120px;
+  padding: 10px 0;
+  text-align: center;
+}
+.portrait img {
+  width: 100px;
+  border-radius: 50%;
+}
+#profile .info {
+  width: 80%;
+  margin: 30px auto 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: #5b615d;
+}
+#profile .info div:first-child {
+  color: #9a9c9b;
+  width: 35%;
+}
+.skills {
+  width: 80%;
+  margin: 50px auto;
+}
+.skills h3 {
+  margin: 10px 0;
+}
+.skills > div {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+.skills .wrap {
+  background: #c4e9d0;
+  height: 8px;
+  width: 100%;
+  border-radius: 4px;
+  margin: 4px 0;
+}
+.skills .skill-bar {
+  background: #00b93a;
+  height: 8px;
+  border-radius: 4px;
+}
+.resume {
+  width: 80%;
+  margin: 0 auto 50px;
+}
+.resume a {
+  text-decoration: underline;
+}
+/*------------------------------------*/
+#main {
+  margin-left: 270px;
+  overflow: hidden;
+}
+/*------------------------------------*/
+#weather {
+  position: relative;
+  margin-bottom: 30px;
+  background-color: #67b1e0;
+  background-size: contain;
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+}
+#weather .wrap {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+#weather .wrap i {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin: 20px auto 10px;
+}
+#today {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 130px;
+}
+#today > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#today > div p {
+  line-height: 28px;
+}
+#forecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#forecast > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 5px;
+  text-align: center;
+}
+#forecast > div footer {
+  margin-bottom: 30px;
+}
+#forecast i {
+  -webkit-transform: scale(0.5, 0.5);
+      -ms-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+  margin: 0 auto !important;
+}
+.icon-arrow {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: url(images/icon-arrow.png);
+  background-size: contain;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  -o-transition: transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+.icon-arrow.rotate90 {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+/*------------------------------------*/
+#projects {
+  overflow: hidden;
+  background: #f5f5f5;
+  margin-bottom: 30px;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+#projects h3 {
+  padding: 10px;
+}
+#projects .project {
+  height: 200px;
+  margin: 10px;
+  padding: 15px;
+  float: left;
+  color: #fff;
+  position: relative;
+}
+#projects .project:nth-of-type(1) {
+  background: #3a6d00;
+}
+#projects .project:nth-of-type(2) {
+  background: #34b3d1;
+}
+#projects .project:nth-of-type(3) {
+  background: #ff8000;
+}
+#projects .project:nth-of-type(4) {
+  background: #95cf3a;
+}
+#projects .project p {
+  line-height: 28px;
+  font-size: 14px;
+  text-indent: 28px;
+}
+#projects .project a {
+  color: #fff;
+  text-decoration: underline;
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+/*------------------------------------*/
+#games {
+  overflow: hidden;
+  background: #f5f5f5;
+  margin-bottom: 30px;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+#games h3 {
+  padding: 10px;
+}
+#games .game {
+  width: calc(50% - 20px);
+  max-width: 220px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 10px;
+  padding: 10px;
+  background: #fff;
+  float: left;
+  position: relative;
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.07);
+}
+#games .game > img {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+#games .desc {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #fff;
+  text-align: center;
+}
+#games .wrap {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+#games .qrcode {
+  max-width: 100%;
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  background: #fff;
+  margin: 0 auto;
+}
+#games .qrcode img {
+  width: 140px;
+}
+/*------------------------------------*/
+@-webkit-keyframes rotateX {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  20% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+  }
+  30% {
+    -webkit-transform: rotateX(-80deg);
+            transform: rotateX(-80deg);
+  }
+  60% {
+    -webkit-transform: rotateX(-95deg);
+            transform: rotateX(-95deg);
+  }
+  80% {
+    -webkit-transform: rotateX(-85deg);
+            transform: rotateX(-85deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+}
+@keyframes rotateX {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  20% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+  }
+  30% {
+    -webkit-transform: rotateX(-80deg);
+            transform: rotateX(-80deg);
+  }
+  60% {
+    -webkit-transform: rotateX(-95deg);
+            transform: rotateX(-95deg);
+  }
+  80% {
+    -webkit-transform: rotateX(-85deg);
+            transform: rotateX(-85deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+}
+.clock {
+  width: 100%;
+  height: 85px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  padding: 10px 15px 10px 30px;
+  background: #f5f5f5;
+  text-align: center;
+  font-size: 0;
+}
+.clock:after {
+  content: "";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+.clock .hour,
+.clock .minute,
+.clock .second {
+  display: inline-block;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  margin: 0 25px 30px 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-12deg) rotateY(15deg);
+          transform: rotateX(-12deg) rotateY(15deg);
+}
+.clock .wrap {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+.clock .wrap div {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  text-shadow: 0 0 5px #34b3d1;
+  color: rgba(52, 179, 209, 0.1);
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #34b3d1;
+}
+.clock .animation {
+  -webkit-animation: rotateX 1s linear infinite;
+          animation: rotateX 1s linear infinite;
+}
+.clock .top {
+  -webkit-transform: rotateX(90deg) translateZ(30px);
+          transform: rotateX(90deg) translateZ(30px);
+}
+.clock .bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(30px);
+          transform: rotateX(-90deg) translateZ(30px);
+}
+.clock .left {
+  -webkit-transform: rotateY(-90deg) translateZ(30px);
+          transform: rotateY(-90deg) translateZ(30px);
+}
+.clock .right {
+  -webkit-transform: rotateY(90deg) translateZ(30px);
+          transform: rotateY(90deg) translateZ(30px);
+}
+.clock .back {
+  -webkit-transform: translateZ(-30px);
+          transform: translateZ(-30px);
+}
+.clock .front {
+  -webkit-transform: translateZ(30px);
+          transform: translateZ(30px);
+}
+.clock .top,
+.clock .front {
+  color: #34b3d1 !important;
+}
+/*------------------------------------*/
+#music {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+  border: 1px solid #f5f5f5;
+  font-size: 0;
+}
+#music .wrap {
+  height: 30px;
+  margin: 85px 0;
+  text-align: center;
+}
+#music .ctrl-box {
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: default;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(245, 245, 245, 0.5);
+}
+#music canvas {
+  width: 100%;
+  height: 200px;
+}
+.range-box {
+  width: 200px;
+  height: 12px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+}
+.range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+.range-progress {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  background: #ddd;
+}
+/*------------------------------------*/
+#article {
+  margin: 10px 0 50px;
+  padding: 20px;
+  border: 1px solid #f5f5f5;
+}
+#article > div {
+  padding: 10px 0 20px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#article h3 {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+#article .info {
+  color: #7f8c8d;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.abstract {
+  font-size: 14px;
+}
+@media screen and (min-width: 1200px) {
+  #main .column {
+    width: calc(50% - 30px);
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #main .column {
+    width: calc(100% - 30px);
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .project {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  .project {
+    width: calc(100% - 20px);
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+  .project {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 960px) {
+  .project {
+    width: calc(100% - 20px);
+  }
+}
+@media screen and (max-width: 750px) {
+  #app {
+    padding: 0;
+  }
+  #profile {
+    width: 100%;
+    position: static;
+  }
+  #main {
+    margin-left: 0;
+  }
+  #main .column {
+    width: 100%;
+    margin: 0;
+  }
+  #clock {
+    display: block;
+  }
+}
+@media screen and (max-width: 960px) {
+  #clock .second {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  #clock .second {
+    display: none;
+  }
+}
+
