@@ -1,5 +1,8 @@
 
-import React, { Component} from 'react'
+import React, { Component } from 'react'
+
+import '../assets/青花瓷 - 周杰伦.mp3'
+import '../assets/龙卷风 - 周杰伦.mp3'
 
 let raf = window.requestAnimationFrame ||
   window.webkitRequestAnimationFrame ||

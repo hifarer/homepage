@@ -1,6 +1,8 @@
 
 import React from 'react'
 
+import '../assets/resume.pdf'
+
 export default () => {
   let data = {
     name: '蒋大山',
