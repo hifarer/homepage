@@ -54,19 +54,19 @@ a {
 .icon-rules {
   display: inline-block;
   width: 0.44rem;
-  height: 0.40rem;
-  background-size: 0.44rem 0.40rem;
+  height: 0.4rem;
+  background-size: 0.44rem 0.4rem;
   margin-right: 0.05rem;
 }
 .btn-start {
   position: absolute;
-  bottom: 0.60rem;
+  bottom: 0.6rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
       transform: translateX(-50%);
   width: 2.82rem;
-  height: 0.80rem;
+  height: 0.8rem;
   background: url(/images/lianliankan/icon-start.png) no-repeat;
   background-size: contain;
 }

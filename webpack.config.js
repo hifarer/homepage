@@ -111,6 +111,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     historyApiFallback: true, // 单页应用可以刷新路由
+    disableHostCheck: true,
     open: true, // 是否自动打开浏览器
     hot: true, // 热更新
     port: 8899
