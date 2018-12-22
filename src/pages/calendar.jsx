@@ -246,7 +246,7 @@ class Calendar extends Component {
     return new Promise((resolve, reject) => {
       let xhr = new window.XMLHttpRequest()
       xhr.responseType = 'json'
-      xhr.open('POST', 'https://wxmp.applinzi.com/holiday')
+      xhr.open('POST', window.location.protocol + '//wxmp.applinzi.com/holiday')
       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
       xhr.send('yyyymms=' + range.join('|'))
       xhr.onreadystatechange = function () {

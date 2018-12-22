@@ -161,7 +161,7 @@ class Weather extends Component {
   getLocation () {
     return new Promise((resolve, reject) => {
       let xhr = new window.XMLHttpRequest()
-      xhr.open('POST', 'https://wxmp.applinzi.com/geolocation')
+      xhr.open('POST', window.location.protocol + '//wxmp.applinzi.com/geolocation')
       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
       xhr.responseType = 'json'
       xhr.send('lat=' + this.coordinate.lat + '&lng=' + this.coordinate.lng)
@@ -182,7 +182,7 @@ class Weather extends Component {
 
   getWeather (city) {
     let xhr = new window.XMLHttpRequest()
-    xhr.open('POST', 'https://wxmp.applinzi.com/weather')
+    xhr.open('POST', window.location.protocol + '//wxmp.applinzi.com/weather')
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
     xhr.responseType = 'json'
     xhr.send('city=' + encodeURIComponent(city))

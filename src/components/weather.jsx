@@ -129,7 +129,7 @@ export default class Weather extends Component {
   getIPLocation () {
     return new Promise((resolve, reject) => {
       let xhr = new window.XMLHttpRequest()
-      xhr.open('POST', 'https://wxmp.applinzi.com/iplocation')
+      xhr.open('POST', window.location.protocol + '//wxmp.applinzi.com/iplocation')
       xhr.send(null)
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
