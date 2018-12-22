@@ -112,7 +112,7 @@ a.btn-next {
   cursor: default;
 }
 .row:not(:first-child) .cell p {
-  font-size: .25rem;
+  font-size: 0.25rem;
   cursor: default;
 }
 .cell:last-child,
