@@ -3,7 +3,7 @@ let shareConfig = {
   title: '王阿姨你有一份礼物待领取！', // 分享标题
   desc: '请温柔的戳我一下', // 分享描述
   link: location.href, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-  imgUrl: 'http://118.24.116.182:3050/images/gift.png', // 分享图标
+  imgUrl: 'http://118.24.116.182:3050/images/christmas/gift.png', // 分享图标
   success: () => {}
 }
 let wxConfig = {

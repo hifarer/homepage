@@ -14,7 +14,7 @@ body {
 }
 
 .stage header {
-  background: url(../images/top-snow-pattern.png) no-repeat;
+  background: url(../images/christmas/top-snow-pattern.png) no-repeat;
   background-size: 100% 100%;
   height: 0.8rem;
 }
@@ -25,7 +25,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: url(../images/layer5.png) 50% 100% no-repeat;
+  background: url(../images/christmas/layer5.png) 50% 100% no-repeat;
   background-size: auto 120%;
 }
 
@@ -35,7 +35,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: url(../images/layer2.png) 50% 100% no-repeat;
+  background: url(../images/christmas/layer2.png) 50% 100% no-repeat;
   background-size: cover;
 }
 
@@ -45,7 +45,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: url(../images/layer1.png) 90% 100% no-repeat;
+  background: url(../images/christmas/layer1.png) 90% 100% no-repeat;
   background-size: 300%;
 }
 
