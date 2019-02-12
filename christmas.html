@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cherish, you have a gift here!</title>
+  <link rel="icon" href="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" type="image/x-icon" />
+  <link rel="shortcut icon" href="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" type="image/x-icon" />
+  <link rel="stylesheet" href="https://codeidot.com/css/weui.min.css"/>
+  <link rel="stylesheet" href="https://codeidot.com/css/christmas.css"/>
+  <script>
+    var w = document.documentElement.offsetWidth || document.body.offsetWidth
+    if (w > 750) w = 750
+    document.documentElement.style.fontSize = w / 10 + 'px';
+  </script>
+</head>
+<body>
+  <div class="wechat-icon">
+    <img src="https://codeidot.com/images/gift.png" width="300" height="300">
+  </div>
+  <div class="stage">
+    <header></header>
+    <div class="mountain"></div>
+    <div class="tree"></div>
+    <div class="layer">
+      <img src="https://codeidot.com/images/christmas-tree.png" alt="">
+    </div>
+  </div>
+  <div id="info-box">
+    <div class="info-content">
+      <form class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" type="text" autofocus id="receiver" name="receiver" placeholder="请输入收件人姓名">
+          </div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label">电话</label></div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" type="number" pattern="[0-9]*" id="mobile" name="mobile" placeholder="请输入收件人电话">
+          </div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label">地址</label></div>
+          <div class="weui-cell__bd">
+            <textarea class="weui-textarea" rows="3" id="address" name="address">上海市</textarea>
+          </div>
+        </div>
+        <div class="weui-btn-area">
+          <button type="submit" class="weui-btn weui-btn_plain-primary">提交</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="dialog" class="js_dialog">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+      <div class="weui-dialog__bd">
+        <span>提交成功啦！</span>
+        <img src="https://codeidot.com/images/love.png" />
+      </div>
+      <div class="weui-dialog__ft">
+        <a href="javascript:;" id="btn-close" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="https://codeidot.com/js/vconsole.min.js"></script> -->
+  <script>
+    // let vConsole = new VConsole();
+    document.write('<script src="' + (location.protocol || 'https:') + '//res.wx.qq.com/open/js/jweixin-1.4.0.js"><\/script>')
+  </script>
+  <script src="https://codeidot.com/js/wechat.js"></script>
+  <script src="https://codeidot.com/js/snow.js"></script>
+  <script>
+    window.onload = function () {
+      document.forms[0].onsubmit = function (event) {
+        event.preventDefault()
+        let receiver = document.getElementById('receiver').value
+        let mobile = document.getElementById('mobile').value
+        let address = document.getElementById('address').value
+        let params = 'receiver=' + encodeURIComponent(receiver) + '&mobile=' + encodeURIComponent(mobile) + '&address=' + encodeURIComponent(address)
+        let xhr = new XMLHttpRequest()
+        xhr.open('POST', 'http://118.24.116.182:3000/wechat/gift')
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+        xhr.send(params)
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+              document.getElementById('dialog').style.display = 'block';
+            }
+          }
+        }
+      }
+      document.getElementById('btn-close').onclick = function () {
+        document.getElementById('dialog').style.display = 'none';
+        document.getElementById('info-box').style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
