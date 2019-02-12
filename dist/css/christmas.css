@@ -1,0 +1,109 @@
+
+
+body {
+  margin: 0;
+}
+
+.stage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #0e5185 0%, #1a8bb2 60%, #219fc1 100%);
+}
+
+.stage header {
+  background: url(../images/top-snow-pattern.png) no-repeat;
+  background-size: 100% 100%;
+  height: 0.8rem;
+}
+
+.stage .mountain {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url(../images/layer5.png) 50% 100% no-repeat;
+  background-size: auto 120%;
+}
+
+.stage .tree {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url(../images/layer2.png) 50% 100% no-repeat;
+  background-size: cover;
+}
+
+.stage .layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url(../images/layer1.png) 90% 100% no-repeat;
+  background-size: 300%;
+}
+
+.stage .layer img {
+  width: 3.5rem;
+  position: absolute;
+  left: 40%;
+  bottom: 2rem;
+}
+
+
+#info-box {
+  width: 7.6rem;
+  height: 9rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#info-box:before,
+#info-box:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  transform: rotate(5deg);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#info-box:after {
+  transform: rotate(-5deg);
+}
+
+.info-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 0.3rem 0.15rem;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.weui-label {
+  width: 50px;
+}
+
+.wechat-icon {
+  position: fixed;
+  top: 0;
+  left: -300px;
+}
+
+#dialog {
+  display: none;
+}
