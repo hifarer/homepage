@@ -3,11 +3,11 @@ let shareConfig = {
   title: '王阿姨你有一份礼物待领取！', // 分享标题
   desc: '请温柔的戳我一下', // 分享描述
   link: location.href, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-  imgUrl: 'http://118.24.116.182:3050/images/christmas/gift.png', // 分享图标
+  imgUrl: 'https://codeidot.com/images/christmas/gift.png', // 分享图标
   success: () => {}
 }
 let wxConfig = {
-  debug: false,
+  debug: true,
   appId: '',
   timestamp: '',
   nonceStr: '',
@@ -46,3 +46,28 @@ function setWxShare (data) {
 }
 
 getWxConfig()
+
+window.onload = function () {
+  document.forms[0].onsubmit = function (event) {
+    event.preventDefault()
+    let receiver = document.getElementById('receiver').value
+    let mobile = document.getElementById('mobile').value
+    let address = document.getElementById('address').value
+    let params = 'receiver=' + encodeURIComponent(receiver) + '&mobile=' + encodeURIComponent(mobile) + '&address=' + encodeURIComponent(address)
+    let xhr = new XMLHttpRequest()
+    xhr.open('POST', 'http://118.24.116.182:3000/wechat/gift')
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+    xhr.send(params)
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+          document.getElementById('dialog').style.display = 'block';
+        }
+      }
+    }
+  }
+  document.getElementById('btn-close').onclick = function () {
+    document.getElementById('dialog').style.display = 'none';
+    document.getElementById('info-box').style.display = 'none';
+  }
+}
