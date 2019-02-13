@@ -7,7 +7,7 @@ let shareConfig = {
   success: () => {}
 }
 let wxConfig = {
-  debug: true,
+  debug: false,
   appId: '',
   timestamp: '',
   nonceStr: '',
