@@ -33,7 +33,7 @@ export default class Article extends Component {
 
   fetchArticle () {
     let xhr = new window.XMLHttpRequest()
-    xhr.open('POST', window.location.protocol + '//wxmp.applinzi.com/article/list')
+    xhr.open('POST', window.location.protocol + '//hunter.im-flower.com/article/list')
     xhr.responseType = 'json'
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
     xhr.send(null)
