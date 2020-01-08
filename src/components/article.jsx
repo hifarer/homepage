@@ -52,6 +52,6 @@ export default class Article extends Component {
   }
 
   linkTo (item) {
-    window.open('https://blog.codeidot.com/article/' + item._id)
+    window.open('https://blog.fedebug.com/article/' + item._id)
   }
 }

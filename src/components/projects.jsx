@@ -19,13 +19,13 @@ export default () => {
       title: 'Node.js Blog',
       desc: '采用Node.js+Express+Mongodb+Vue.js全家桶开发，具有Server Side Render服务器渲染，按需加载等特点。',
       linkName: 'link',
-      href: 'https://blog.codeidot.com'
+      href: 'https://blog.fedebug.com'
     },
     {
       title: 'Mobile Site',
       desc: '移动端自适应页面集合，包括天气、日历等。',
       linkName: 'link',
-      href: 'https://www.codeidot.com/weather'
+      href: 'https://www.fedebug.com/weather'
     }
   ]
   return (

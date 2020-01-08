@@ -54,8 +54,8 @@ export default class Games extends Component {
 
   componentWillMount () {
     let data = {
-      dds: 'https://www.codeidot.com/dadishu.html',
-      llk: 'https://www.codeidot.com/lianliankan.html'
+      dds: 'https://www.fedebug.com/dadishu.html',
+      llk: 'https://www.fedebug.com/lianliankan.html'
     }
     let state = {}
     let qrcode = new window.QRCode(document.createElement('div'), '')
@@ -92,7 +92,7 @@ export default class Games extends Component {
 
   clickHandler (name) {
     if (this.state.isMobile) {
-      window.open('https://www.codeidot.com/' + name + '.html')
+      window.open('https://www.fedebug.com/' + name + '.html')
     }
   }
 }
