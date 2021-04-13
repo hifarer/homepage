@@ -1,3 +1,38 @@
-<!DOCTYPE html><html lang="cn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="format-detection" content="no"><title>打地鼠</title><script>var deviceWidth = document.documentElement.clientWidth || screen.width;
-    if (deviceWidth > 750) deviceWidth = 750;
-    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';</script><link href="/css/dadishu.min.css" rel="stylesheet"></head><body><div id="app"></div><script src="./js/createjs.min.js"></script><script type="text/javascript" src="/js/dadishu.min.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function audioRecorderSupported() {
+            window['AudioContext'] = window['AudioContext'] || window['webkitAudioContext'];
+            window.URL = window.URL || window['webkitURL'];
+            return (
+                window['AudioContext'] &&
+                window.URL &&
+                navigator.mediaDevices &&
+                navigator.mediaDevices.getUserMedia
+            );
+        }
+
+        if (audioRecorderSupported()) {
+            window['audioContext'] = window['audioContext'] || new AudioContext();
+            const audioContext = window['audioContext'];
+
+            navigator.mediaDevices
+                .getUserMedia({audio: true})
+                .then(stream => {
+                    console.log('success')
+                })
+                .catch(e => {
+                    // eslint-disable-next-line
+                    console.log(e);
+                });
+        }
+    </script>
+</body>
+</html>
