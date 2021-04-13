@@ -20,15 +20,17 @@
             );
         }
         
-        alert(window['AudioContext']);
+        audioRecorderSupported();
+        
+        alert('AudioContext' + window['AudioContext']);
         setTimeout(() => {
-            alert(window.URL);
+            alert('URL ' + window.URL);
         }, 500);
         setTimeout(() => {
-            alert(navigator.mediaDevices);
+            alert('mediaDevices ' + navigator.mediaDevices);
         }, 1000);
         setTimeout(() => {
-            alert(navigator.mediaDevices.getUserMedia);   
+            alert('getUserMedia ' + navigator.mediaDevices.getUserMedia);   
         }, 1500);
 
 
