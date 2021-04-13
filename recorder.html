@@ -20,7 +20,17 @@
             );
         }
         
-        alert('audioRecorderSupported: ' + !!audioRecorderSupported())
+        alert(window['AudioContext']);
+        setTimeout(() => {
+            alert(window.URL);
+        }, 500);
+        setTimeout(() => {
+            alert(navigator.mediaDevices);
+        }, 1000);
+        setTimeout(() => {
+            alert(navigator.mediaDevices.getUserMedia);   
+        }, 1500);
+
 
         if (audioRecorderSupported()) {
             window['audioContext'] = window['audioContext'] || new AudioContext();
