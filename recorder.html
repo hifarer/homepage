@@ -19,6 +19,8 @@
                 navigator.mediaDevices.getUserMedia
             );
         }
+        
+        alert('audioRecorderSupported: ' + !!audioRecorderSupported())
 
         if (audioRecorderSupported()) {
             window['audioContext'] = window['audioContext'] || new AudioContext();
@@ -27,11 +29,11 @@
             navigator.mediaDevices
                 .getUserMedia({audio: true})
                 .then(stream => {
-                    console.log('success')
+                    alert('success')
                 })
                 .catch(e => {
                     // eslint-disable-next-line
-                    console.log(e);
+                    alert(JSON.stringify(e));
                 });
         }
     </script>
