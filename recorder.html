@@ -19,9 +19,16 @@
                 navigator.mediaDevices.getUserMedia
             );
         }
-        
-        audioRecorderSupported();
-        
+        if (audioRecorderSupported()) {
+            navigator.mediaDevices
+                .getUserMedia({audio: true})
+                .then(stream => {
+                    alert('success');
+                })
+                .catch(e => {
+                    alert(JSON.stringify(e));
+                });
+        }
         alert('AudioContext ' + window['AudioContext']);
         setTimeout(() => {
             alert('URL ' + window.URL);
@@ -32,22 +39,6 @@
         setTimeout(() => {
             alert('getUserMedia ' + navigator.mediaDevices.getUserMedia);   
         }, 1500);
-
-
-        if (audioRecorderSupported()) {
-            window['audioContext'] = window['audioContext'] || new AudioContext();
-            const audioContext = window['audioContext'];
-
-            navigator.mediaDevices
-                .getUserMedia({audio: true})
-                .then(stream => {
-                    alert('success')
-                })
-                .catch(e => {
-                    // eslint-disable-next-line
-                    alert(JSON.stringify(e));
-                });
-        }
     </script>
 </body>
 </html>
