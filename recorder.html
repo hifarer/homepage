@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function audioRecorderSupported() {
+            window['AudioContext'] = window['AudioContext'] || window['webkitAudioContext'];
+            window.URL = window.URL || window['webkitURL'];
+            return (
+                window['AudioContext'] &&
+                window.URL &&
+                navigator.mediaDevices &&
+                navigator.mediaDevices.getUserMedia
+            );
+        }
+
+        if (audioRecorderSupported()) {
+            window['audioContext'] = window['audioContext'] || new AudioContext();
+            const audioContext = window['audioContext'];
+
+            navigator.mediaDevices
+                .getUserMedia({audio: true})
+                .then(stream => {
+                    console.log('success')
+                })
+                .catch(e => {
+                    // eslint-disable-next-line
+                    console.log(e);
+                });
+        }
+    </script>
+</body>
+</html>
