@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="play">play</button>
+    <script>
+    const audioUrl = 'https://fedebug.com/assets/%E9%9D%92%E8%8A%B1%E7%93%B7%20-%20%E5%91%A8%E6%9D%B0%E4%BC%A6.mp3'
+    const audio = new Audio(audioUrl);
+    document.getElementById('play').addEventListener('click', () => {
+        audio.play();
+    })
+    window.addEventListener('beforeunload', () => {
+        audio.pause()
+    })
+    window.addEventListener('unload', () => {
+        audio.pause()
+    })
+    window.addEventListener('pagehide', () => {
+        audio.pause()
+    })
+    </script>
+</body>
+</html>
